@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <h1>My First React App</h1>
-      <ListGroup items={items} heading='But Love is greater than all' ></ListGroup>
+      <ListGroup items={items} heading='But Love is greater than all' onSelect={() => {  console.log("You Clicked!")}}></ListGroup>
       <Alert>this is alert</Alert>
     </div>
   )
