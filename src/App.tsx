@@ -2,37 +2,25 @@ import "./App.css";
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import { useState } from "react";
+import ExpandableText from "./components/ExpandableText";
 function App() {
-  // const [game, setGame] = useState({
-  //   id: 1,
-  //   player: {
-  //     name: "John"
-  //   }
-  // });
-
-  // const handleClick = () => {
-  //   setGame({ ...game, player: { ...game.player, name: "Bob" } });
-  // }
-
   const [pizza, setPizza] = useState({
     name: "Spicy Peperroni",
     toppings: ["Mushroom"],
   });
   const handleClick = () => {
     setPizza({ ...pizza, toppings: [...pizza.toppings, "Cheese"] });
-  }
+  };
 
   return (
     <div className="App">
-      <h1>My First React App</h1>
-      <ListGroup
-        items={items}
-        heading="But Love is greater than all"
-        onSelect={() => {
-          console.log("You Clicked!");
-        }}
-      ></ListGroup>
-      <Alert>this is alert</Alert>
+      <ExpandableText>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sequi
+        animi provident quae iusto esse beatae culpa corrupti, vel architecto
+        possimus consectetur quis ad doloribus amet veniam fuga nostrum in, sunt
+        blanditiis dicta nobis! Sunt maiores magni quo, optio dolorem in
+        temporibus est! Porro, iusto? Deserunt consectetur maxime aut provident.
+      </ExpandableText>
     </div>
   );
 }
